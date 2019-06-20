@@ -1,0 +1,29 @@
+using System;
+namespace ConsoleApplication1
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+        
+string eingabe=Console.ReadLine();
+int länge=eingabe.Length-1;
+int b=0;
+
+for(int x=0; x<=länge; x++)
+{
+if (eingabe.Substring(x,1)==eingabe.Substring(länge-x,1))
+b=b+1;
+}
+
+if (b==länge+1)
+{
+    Console.WriteLine("YES");
+}
+else
+{
+    Console.WriteLine("NO");
+}
+    }
+  }
+}
